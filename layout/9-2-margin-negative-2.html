@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>margin 负值</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .wrap {
+            width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            background-color: #999;
+        }
+        ul {
+            padding: 0;
+        }
+        ul > li {
+            list-style: none;
+            float: left;
+            width: 200px;
+            height: 200px;
+            margin-right: 100px;
+            margin-bottom: 20px;
+            background-color: #ccc;
+        }
+        /*以前常见的解决方案*/
+        ul>li:nth-child(3n) {
+            margin-right: 0;
+        }
+
+        ul {
+            /*margin-right: -100px;*/
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+        </ul>
+    </div>
+</body>
+</html>

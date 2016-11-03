@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex 三列布局</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .hd,
+        .ft {
+            background-color: #ddd;
+        }
+        .bd > div {
+            height: 200px;
+        }
+        .main {
+            background-color: #999;
+        }
+        .left {
+            background-color: #ccc;
+        }
+        .right {
+            background-color: #555;
+        }
+        .bd {
+            display: flex;
+        }
+        .main {
+            flex: 1;
+        }
+        .left,
+        .right {
+            flex: 0 0 200px;
+        }
+        .left {
+            order: -1;
+        }
+
+        /*屏幕宽度缩小，直接垂直叠加*/
+        @media screen and (max-width: 768px) {
+            .bd {
+                flex-direction: column;
+            }
+            .main,
+            .left,
+            .right {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hd">hd</div>
+    <div class="bd">
+        <div class="main">main</div>
+        <div class="left">left</div>
+        <div class="right">right</div>
+    </div>
+    <div class="ft">ft</div>
+</body>
+</html>

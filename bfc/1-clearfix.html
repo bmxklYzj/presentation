@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bfc clearfix</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .wrap {
+            background-color: #ccc;
+            /*overflow: hidden;*/
+            margin-bottom: 20px;
+        }
+        .left {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: #999;
+        }
+        .p-wrap p {
+            margin-top: 50px;
+        }
+        .p-wrap {
+            clear: both;
+            overflow: hidden;
+            background-color: #ccc;
+        }
+
+        .top-wrap p {
+            margin: 50px 0;
+        }
+        .top-wrap {
+            /*overflow: hidden;*/
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="left">left</div>
+    </div>
+    <div class="p-wrap">
+        <p>paragraph</p>
+    </div>
+
+    <p style="margin: 20px 0">margin collapse</p>
+    <div class="top-wrap">
+        <p>margin collapses</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>line-height</title>
+    <style>
+        body {
+            margin: 0;
+            font-size: 14px;
+        }
+        .wrap {
+            background-color: #ccc;
+            /*border: 1px solid red;*/
+        }
+
+        .parent1 {
+            line-height: 1;
+        }
+        .parent2 {
+            line-height: 100%;
+        }
+        .child1,
+        .child2 {
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap" style="font-size: 0;line-height: 14px;">font-size: 0</div><br>
+    <div class="wrap" style="font-size: 14px;line-height: 0;">line-height: 0</div><br>
+
+    <div class="parent1">
+        line-height: 1;
+        <div class="child1">line-height: 1;</div>
+    </div>
+    <div class="parent2">
+        line-height: 100%;
+        <div class="child2">line-height: 100%;</div>
+    </div>
+</body>
+</html>

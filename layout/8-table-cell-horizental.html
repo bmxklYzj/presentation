@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>table-cell 水平排列布局</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .wrap {
+            width: 500px;
+            height: 200px;
+            background-color: #999;
+        }
+        ul {
+            padding: 0;
+        }
+        ul.inline-bock > li {
+            list-style: none;
+            display: inline-block;
+            box-sizing: border-box;
+            padding: 10px 20px;
+            width: 100px;
+            background-color: #ccc;
+        }
+
+        ul.table-cell > li {
+            list-style: none;
+            display: table-cell;
+            box-sizing: border-box;
+            padding: 10px 20px;
+            width: 100px;
+            background-color: #ccc;
+        }
+        ul>li:hover {
+            background-color: aqua;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <ul class="inline-bock">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+
+    <div class="wrap">
+        <ul class="table-cell">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+</body>
+</html>

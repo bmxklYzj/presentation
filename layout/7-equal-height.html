@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多栏 等高布局</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .wrap {
+            display: table;
+            height: 300px;
+        }
+        .table-cell {
+            display: table-cell;
+            /*vertical-align: middle;*/
+        }
+        .col1 {
+            width: 200px;
+            background-color: #ccc;
+        }
+        .col2 {
+            background-color: #999;
+        }
+
+        .wrap-flex {
+            margin-top: 30px;
+            display: flex;
+        }
+        .wrap-flex > div:first-child {
+            flex: 0 0 200px;
+            /*让里面的文字再垂直居中*/
+            /*display: flex;*/
+            /*align-items: center;*/
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="col1 table-cell">
+            table-cell 等高布局
+        </div>
+
+        <div class="col2 table-cell">
+            优雅降级EDIT
+            多列属性会被不支持多列模型的浏览器忽略。因此，为这些浏览器创建单列结构而为支持多列的浏览器创建多列结构相对来说比较简单。
+
+            注意不是所有的浏览器都支持不带前缀的属性名。为了在大多数现代浏览器中应用这种特性，每个属性必须写三次： 一次用 -moz 前缀，一次用 -webkit 前缀，一次不使用前缀
+        </div>
+    </div>
+
+    <div class="wrap-flex">
+        <div class="col1">
+            flex 等高布局
+        </div>
+
+        <div class="col2">
+            优雅降级EDIT
+            多列属性会被不支持多列模型的浏览器忽略。因此，为这些浏览器创建单列结构而为支持多列的浏览器创建多列结构相对来说比较简单。
+
+            注意不是所有的浏览器都支持不带前缀的属性名。为了在大多数现代浏览器中应用这种特性，每个属性必须写三次： 一次用 -moz 前缀，一次用 -webkit 前缀，一次不使用前缀
+        </div>
+    </div>
+</body>
+</html>

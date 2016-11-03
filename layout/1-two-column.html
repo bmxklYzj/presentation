@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>two column</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .container {
+            background-color: #ccc
+        }
+        .left {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: #888;
+            /*margin-right: 20px;*/
+        }
+        .right {
+            margin-left: 220px;
+            height: 200px;
+            background-color: #666;
+            /*触发bfc*/
+            /*overflow: hidden;*/
+        }
+
+        .wrap {
+            padding-left: 220px;
+            background-color: #ccc;
+            overflow: hidden;
+        }
+        .wrap-left  {
+            width: 200px;
+            float: left;
+            margin-left: -220px;
+            background-color: #888;
+        }
+        .wrap-right {
+            background-color: #666;
+        }
+
+        .wrap-flex {
+            display: flex;
+            background-color: #ccc;
+            margin-bottom: 20px;
+        }
+        .wrap-flex-left {
+            flex: 0 0 200px;
+            margin-right: 20px;
+            background-color: #888;
+        }
+        .wrap-flex-right {
+            flex: 1;
+            background-color: #666;
+        }
+
+        .wrap-table-cell-left {
+            width: 200px;
+            float: left;
+            background-color: #ccc;
+            margin-right: 20px;
+        }
+        .wrap-table-cell-right {
+            background-color: #999;
+            display: table-cell;
+            width: 9999px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="left">margin实现  left left left left left left left left left left left left left left left left left left left left left </div>
+    <div class="right">right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right</div>
+</div>
+
+<br>
+
+<div class="wrap">
+    <div class="wrap-left">margin实现  wrap-left wrap-left wrap-left wrap-left wrap-left wrap-left wrap-left wrap-left wrap-left wrap-left wrap-left </div>
+    <div class="wrap-right">wrap-right wrap-right wrap-right wrap-right wrap-right wrap-right wrap-right wrap-right wrap-right wrap-right wrap-right wrap-right </div>
+</div>
+
+<br>
+
+<div class="wrap-flex">
+    <div class="wrap-flex-left">flex实现  wrap-flex-left wrap-flex-left wrap-flex-left wrap-flex-left wrap-flex-left wrap-flex-left wrap-flex-left </div>
+    <div class="wrap-flex-right">wrap-flex-right wrap-flex-right wrap-flex-right wrap-flex-right wrap-flex-right wrap-flex-right wrap-flex-right </div>
+</div>
+
+<div class="wrap-table-cell">
+    <div class="wrap-table-cell-left">table-cell table-cell table-cell table-cell table-cell table-cell </div>
+    <div class="wrap-table-cell-right"> wrap-table-cell wrap-table-cell wrap-table-cell wrap-table-cell wrap-table-cell wrap-table-cell wrap-table-cell wrap-table-cell wrap-table-cell wrap-table-cell</div>
+</div>
+</body>
+</html>

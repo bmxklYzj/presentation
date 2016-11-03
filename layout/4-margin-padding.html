@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>margin padding</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: #ccc;
+        }
+        .div1 {
+            /*
+            原理是：正的 padding-bottom 先填充背景
+                然后 负的 margin-bottom 和 父元素的ovflow:hidden; 结合产生截断效果
+             */
+            margin-bottom: -200px;
+            /*padding-bottom: 200px;*/
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">div div div div </div>
+    <br>
+    <div class="div2">div2 div2 div2 div2 </div>
+</body>
+</html>

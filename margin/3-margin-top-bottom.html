@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>margin top bottom</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .parent {
+            width: 400px;
+            background-color: #ccc;
+            /*margin: 50px 0;*/
+        }
+        button {
+            display: block;
+        }
+        button:first-child {
+            margin-top: 50px;
+        }
+        button:last-child {
+            margin-bottom: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <button>button1</button>
+        <button>button2</button>
+        <button>button3</button>
+        <button>button4</button>
+        <button>button5</button>
+    </div>
+    <p>paragraph</p>
+</body>
+</html>

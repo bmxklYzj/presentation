@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>column count 多栏布局</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .wrap {
+            /*缩写*/
+            /*columns: 2em 3;*/
+            column-count: 3;
+            column-width: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        columns 属性简写
+
+        多数时候，网页设计者都会使用 column-count 和 column-width 的一个. 由于它们的值没有重叠，一般使用简写属性 columns。例如，
+
+        优雅降级EDIT
+        多列属性会被不支持多列模型的浏览器忽略。因此，为这些浏览器创建单列结构而为支持多列的浏览器创建多列结构相对来说比较简单。
+
+        注意不是所有的浏览器都支持不带前缀的属性名。为了在大多数现代浏览器中应用这种特性，每个属性必须写三次： 一次用 -moz 前缀，一次用 -webkit 前缀，一次不使用前缀
+    </div>
+</body>
+</html>

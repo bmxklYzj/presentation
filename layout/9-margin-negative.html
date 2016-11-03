@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>margin 负值</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .wrap {
+            width: 810px;
+            margin: 0 auto;
+            /*overflow: hidden;*/
+            background-color: #999;
+        }
+        ul {
+            padding: 0;
+            margin-right: -1px;
+        }
+        ul > li {
+            list-style: none;
+            float: left;
+            width: 200px;
+            height: 200px;
+            /*box-sizing: border-box;*/
+            border: 1px solid #555;
+            margin-left: -1px;
+            margin-top: -1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+        </ul>
+    </div>
+</body>
+</html>
